@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>Projeto Bootstrap4</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style type="text/css">
+        #area{
+            border: 1px solid #00cf01;
+            padding: 10px;
+            background-color: #b1dfbb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="accordion">
+            <div class="card">
+
+                <div class="card-header">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#c1" aria-controls="c1">card 1</button>
+                </div>
+                <div id="c1" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        texto
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-header">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#c2" aria-controls="c2">card 2</button>
+                </div>
+                <div id="c2" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        texto
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-header">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#c3" aria-controls="c3">card 3</button>
+                </div>
+                <div id="c3" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        texto
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
