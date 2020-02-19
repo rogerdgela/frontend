@@ -1,0 +1,45 @@
+.text1{
+	white-space: nowrap;
+	width: 200px;
+	border: 1px solid #9FFB0F;
+	overflow: hidden;
+	text-overflow: clip;
+}
+
+.text2{
+	white-space: nowrap;
+	width: 200px;
+	border: 1px solid #9FFB0F;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.text3{
+	white-space: nowrap;
+	width: 200px;
+	border: 1px solid #9FFB0F;
+	overflow: hidden;
+}
+
+.text3:hover{
+	text-overflow: inherit;
+	overflow: visible;
+}
+
+.text4{
+	width: 140px;
+	border: 1px solid #000000;
+	word-break:  break-all; 
+}
+
+.text5{
+	width: 140px;
+	border: 1px solid #000000;
+	word-break:  keep-all;
+}
+
+.text6{
+	width: 140px;
+	border: 1px solid #000000;
+	word-wrap: break-word;
+}

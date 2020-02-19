@@ -1,0 +1,14 @@
+body{
+	margin: 0;
+}
+.teste{
+	width: 600px;
+	height: 300px;
+	background-color: black;
+}
+@media only screen and (min-width: 200px) and (max-width: 600px) {
+	.teste{
+		background-color: green;
+		width: 300px;
+	}
+}

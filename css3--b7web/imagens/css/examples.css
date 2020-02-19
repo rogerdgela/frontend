@@ -1,0 +1,52 @@
+.image1{
+	background-color: #000000;
+	border-radius: 8px;
+}
+
+.image2{
+	background-color: #000000;
+	border-radius: 50%;
+}
+
+.image3{
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 5px;
+}
+
+.link{
+	display: inline-block;
+	border:  1px solid #ddd;
+	border-radius: 4px;
+	padding: 5px;
+	transition: 0.3s;
+}
+
+.link:hover{
+	box-shadow: 0 0 2px 1px #939393;
+}
+
+.img-responsive{
+	max-width: 100%;
+	height: auto;
+}
+
+.card{
+	background-color: #FFFFFF;
+	box-shadow: 0 4px 8px 0 #2DFF04, 0 6px 20px 0 #3E3E3E;
+}
+
+.card img{
+	width: 100%;
+	background-color: #35FF0D; 
+}
+
+.card .container{
+	text-align: center;
+	padding: 10px 20px;
+}
+
+.filter{
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}

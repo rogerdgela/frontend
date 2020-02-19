@@ -1,0 +1,32 @@
+#textshadow1{
+	text-shadow: 1px 1px;
+}
+
+#textshadow2{
+	color: #FFFFFF;
+	text-shadow: 1px 1px 5px #41BD10;
+}
+
+#textshadow3{
+	text-shadow: -1px -10px 5px #41BD10, 1px 10px 5px #334C07;
+}
+
+#textshadow4{
+	color: #FFFFFF;
+	text-shadow: 1px 1px 2px #000000, 1px 10px 5px #334C07, 0 0 5px #0A5B99;
+}
+
+div.card{
+	box-shadow: 0 4px 8px #A30303, 0 6px 20px 0 #FF1010;
+}
+
+div.header1{
+	background-color: #554141;
+	color: #FFFFFF;
+	padding: 10px;
+	font-size: 30px;
+}
+
+div.container{
+	padding: 5px;
+}

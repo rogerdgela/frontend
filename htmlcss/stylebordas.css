@@ -1,0 +1,11 @@
+body{
+	margin: 0;
+}
+
+.teste{
+	background-color: #fff;
+	width: 300px;
+	height: 300px;
+	border: 1px solid green;
+	border-radius: 150px;
+}

@@ -1,0 +1,52 @@
+#element{
+	width: 200px;
+	height: 80px;
+	padding: 20px;
+	text-align: center;
+	font-size: 30px;
+	background-color: #1b6d85;
+	color: white;
+}
+
+.translate{
+	-ms-transform: translate(50px,100px);
+	-webkit-transform: translate(50px,100px);
+	transform: translate(50px,100px);
+}
+
+.rotate{
+	-ms-transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	transform: rotate(20deg);
+}
+
+.scale{
+	-ms-transform: scale(2,3);
+	-webkit-transform: scale(2,3);
+	transform: scale(2,3);
+}
+
+.skewX{
+	-ms-transform: skewX(20deg);
+	-webkit-transform: skewX(20deg);
+	transform: skewX(20deg);
+}
+
+.skewY{
+	-ms-transform: skewY(20deg);
+	-webkit-transform: skewY(20deg);
+	transform: skewY(20deg);
+}
+
+.skew{
+	-ms-transform: skew(20deg, 30deg);
+	-webkit-transform: skew(20deg, 30deg);
+	transform: skew(20deg, 30deg);
+}
+
+/* matrix(scaleC(),skewY(),skewX(),scaleY(),translateX(),translateY())*/
+.matrix{
+	-ms-transform: matrix(1,-0.3, 0, 1, 0, 0);	
+	-webkit-transform: matrix(1,-0.3, 0, 1, 0, 0);	
+	transform: matrix(1,-0.3, 0, 1, 0, 0);	
+}

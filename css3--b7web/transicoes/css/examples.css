@@ -1,0 +1,73 @@
+.element1{
+	width: 200px;
+	height: 30px;
+	padding: 20px;
+	text-align: center;
+	font-size: 30px;
+	background-color: #000000;
+	color: #50FF0B;
+	transition: background-color 2s, width 3s, color 2s;
+	-webkit-transition: background-color 2s, width 3s, color 2s;
+}
+
+.transitions1{
+	transition-timing-function: ease;
+	-webkit-transition-timing-function: ease;
+}
+
+.transitions2{
+	transition-timing-function: linear;
+	-webkit-transition-timing-function: linear;
+}
+
+.transitions3{
+	transition-timing-function: ease-in;
+	-webkit-transition-timing-function: ease-in;
+}
+
+.transitions4{
+	transition-timing-function: ease-out;
+	-webkit-transition-timing-function: ease-out;
+}
+
+.transitions5{
+	transition-timing-function: ease-in-out;
+	-webkit-transition-timing-function: ease-in-out;
+}
+
+.transitions6{
+	transition-timing-function: cubic-bezier(0.4,2,0.2,1);
+	-webkit-transition-timing-function: cubic-bezier(0.4,2,0.2,1);
+}
+
+.transitions7{
+	transition-delay: 3s;
+	-webkit-transition-delay: 3s;
+}
+
+.element1:hover{
+	width: 500px;
+	background-color: #50FF0B;
+	color: #000000;
+}
+
+.element2{
+	width: 200px;
+	height: 30px;
+	padding: 20px;
+	text-align: center;
+	font-size: 30px;
+	background-color: #000000;
+	color: #50FF0B;
+	transition: background-color 2s, width 3s, height 3s, color 2s, transform 2s;
+	-webkit-transition: background-color 2s, width 3s, height 3s, color 2s, transform 2s;
+}
+
+.element2:hover{
+	width: 500px;
+	height: 50px;
+	background-color: #50FF0B;
+	color: #000000;
+	transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+}

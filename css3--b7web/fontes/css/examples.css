@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Kumar+One');
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+
+@font-face{
+	font-family: "MinhaFonte";
+	src: url(../fontes/COLONNA.TTF);
+}
+
+.fonte1{
+	font-family: 'Kumar One', cursive;
+}
+
+.fonte2{
+	font-family: 'Architects Daughter', cursive;
+}
+
+.fonte3{
+	font-family: "MinhaFonte";
+}

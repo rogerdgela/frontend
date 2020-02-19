@@ -1,0 +1,102 @@
+.player{
+	position: relative;
+	animation-name: animation2;
+	-webkit-animation-name: animation2;
+	animation-duration: 4s;
+	-webkit-animation-duration: 4s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+	-webkit-animation-direction: alternate-reverse;
+	/*animation-delay: 3s;*/
+}
+
+.player-body{
+	width: 0;
+	height: 0;
+	border-right:  61px solid transparent;
+	border-top: 92px solid #29F201;
+	border-left: 61px solid #29F201;
+	border-bottom: 27px solid #29F201;
+	border-top-right-radius: 50px;
+	border-top-left-radius: 139px;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+}
+
+.player-eye{
+	position: absolute;
+	left: 72px;
+	top: 27px;
+	border-radius: 100%;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	background-color: #FFFFFF;
+	width: 30px;
+	height: 23px;
+	animation: blink 3s linear 1s infinite;
+}
+
+@-webkit-keyframes animation1{
+	from{
+		-ms-transform: translate(0,0);
+		-webkit-transform: translate(0,0);
+		transform: translate(0,0);
+	}
+	to{
+		-ms-transform: translate(500px,0);
+		-webkit-transform: translate(500px,0);
+		transform: translate(500px,0);
+	}
+}
+
+@keyframes animation1{
+	from{
+		transform: translate(0,0);
+	}
+	to{
+		transform: translate(500px,0);
+	}
+}
+
+@-webkit-keyframes animation2{
+	0%{
+		-ms-transform: translate(0,0);
+		-webkit-transform: translate(0,0);
+		transform: translate(0,0);
+	}
+	25%{
+		-ms-transform: translate(0,0);
+		-webkit-transform: translate(100px,0);
+		transform: translate(100px,20px);
+	}
+	50%{
+		-ms-transform: translate(200px,0);
+		-webkit-transform: translate(200px,0);
+		transform: translate(200px,0);
+	}
+	75%{
+		-ms-transform: translate(300px,0);
+		-webkit-transform: translate(300px,0);
+		transform: translate(300px,10px);
+	}
+	100%{
+		-ms-transform: translate(500px,0);
+		-webkit-transform: translate(500px,0);
+		transform: translate(500px,0);
+	}
+} 
+
+@keyframes animation2{
+	0%{transform: translate(0,0);}
+	25%{transform: translate(100px,20px);}
+	50%{transform: translate(200px,0);}
+	75%{transform: translate(300px,10px);}
+	100%{transform: translate(500px,0);}
+} 
+
+@keyframes blink{
+	0%{background-color: #FFFFFF;}	
+	98%{background-color:  #FFFFFF;}
+	100%{background-color: #29F201;}
+}
