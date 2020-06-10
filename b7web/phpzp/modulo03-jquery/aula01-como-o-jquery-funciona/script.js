@@ -5,4 +5,8 @@ $(document).ready(chamaFuncao());
 /*
 $(document).ready(function () {
     alert("Teste");
+});
+
+$(function(){
+    alert('teste');
 });*/
