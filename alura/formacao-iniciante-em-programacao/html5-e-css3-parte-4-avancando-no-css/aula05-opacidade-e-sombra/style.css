@@ -167,7 +167,7 @@ td, th {
     margin: 0 0 1em;
     clear: left;
     /*color: rgba(0, 85, 122, 0.7);*/
-    text-shadow: 2px 2px #003775;
+    text-shadow: 2px 2px 2px #000000;
 }
 
 .titulo-principal:before {
