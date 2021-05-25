@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="meuApp" ng-controller="meuCtrl">
+    <!--<input type="text" ng-model="nome"><br><br>
+    <input type="text" ng-model="sobrenome"><br>-->
+    <input type="text" ng-model="n1"><br><br>
+    <input type="text" ng-model="n2"><br>
+    <p>{{ n1 + n2 }}</p>
+</div>
+
+<script type="text/javascript">
+    let app = angular.module('meuApp', []);
+    app.controller('meuCtrl', function ($scope){
+        $scope.n1 = '0';
+        $scope.n2 = '0';
+    });
+</script>
+</body>
+</html>
