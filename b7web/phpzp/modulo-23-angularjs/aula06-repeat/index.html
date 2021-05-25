@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="meuApp" ng-controller="meuCtrl">
+    <h2>Receita do Bolo</h2>
+    <ul>
+        <li ng-repeat="ing in ingredientes">
+            {{ ing.qty + ' de ' + ing.nome }}
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    let app = angular.module('meuApp', []);
+    app.controller('meuCtrl', function ($scope){
+        $scope.ingredientes = [
+            {'nome':'Farinha', 'qty': '20g'},
+            {'nome':'Ovos', 'qty': '2'},
+            {'nome':'Chocolate', 'qty': '200g'}
+        ];
+        /*$scope.ingredientes = [
+           'Farinha', 'Ovo', 'Chocolate'
+        ];*/
+    });
+</script>
+</body>
+</html>
