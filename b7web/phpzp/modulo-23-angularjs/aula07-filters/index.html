@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="meuApp" ng-controller="meuCtrl">
+    <h2>Lista de Nomes</h2>
+
+    <select ng-model="ordernarPor">
+        <option value="nome">Por Nome</option>
+        <option value="pais">por País</option>
+    </select>
+
+    <table border="0">
+        <tr>
+            <th>Nome</th>
+            <th>País</th>
+        </tr>
+        <tr ng-repeat="x in nomes | orderBy:ordernarPor">
+            <td>{{ x.nome }}</td>
+            <td>{{ x.pais }}</td>
+        </tr>
+    </table>
+
+    <!--<input type="text" ng-model="filtrarPor">-->
+
+    <!--<ul>
+        <li ng-repeat="x in nomes | filter:filtrarPor">
+            {{ x }}
+        </li>
+        <li ng-repeat="ing in ingredientes | filter:filtrarPor">
+            {{ ing.qty }} de {{ ing.nome }}
+        </li>
+        <li ng-repeat="ing in ingredientes">
+            {{ ing.qty }} de {{ ing.nome | uppercase }}
+        </li>
+    </ul>-->
+</div>
+
+<script type="text/javascript">
+    let app = angular.module('meuApp', []);
+    app.controller('meuCtrl', function ($scope){
+        $scope.nomes = [
+            {'nome':'Rogerio', 'pais': 'Brasil'},
+            {'nome':'Maria', 'pais': 'Japão'},
+            {'nome':'Di', 'pais': 'Argelia'},
+            {'nome':'Diego', 'pais': 'Afeganistão'}
+        ];
+        /*$scope.nomes = ['Teste','Teste2','Teste3','Teste4','Teste5',];*/
+        /*$scope.ingredientes = [
+            {'nome':'Farinha', 'qty': '20g'},
+            {'nome':'Ovos', 'qty': '2'},
+            {'nome':'Chocolate', 'qty': '200g'}
+        ];*/
+    });
+</script>
+</body>
+</html>
