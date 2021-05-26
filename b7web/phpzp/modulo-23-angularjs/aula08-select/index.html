@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="meuApp" ng-controller="meuCtrl">
+    <h2>Lista de Nomes</h2>
+
+    <select ng-model="ordernarPor" ng-options="op.nome for op in opcoes">
+        <!--<option ng-repeat="op in opcoes">{{ op }}</option>-->
+    </select>
+
+    <table border="0">
+        <tr>
+            <th align="left" ng-repeat="op in opcoes">{{ op.nome | uppercase }}</th>
+        </tr>
+        <tr ng-repeat="x in nomes | orderBy:ordernarPor.valor">
+            <td>{{ x.nome }}</td>
+            <td>{{ x.pais }}</td>
+        </tr>
+    </table>
+</div>
+
+<script type="text/javascript">
+    let app = angular.module('meuApp', []);
+    app.controller('meuCtrl', function ($scope){
+        $scope.opcoes = [
+            {nome:'Nome do Sujeito', valor:'nome'},
+            {nome:'País do Sujeito', valor:'pais'},
+        ];
+        $scope.nomes = [
+            {'nome':'Rogerio', 'pais': 'Brasil'},
+            {'nome':'Maria', 'pais': 'Japão'},
+            {'nome':'Di', 'pais': 'Argelia'},
+            {'nome':'Diego', 'pais': 'Afeganistão'}
+        ];
+    });
+</script>
+</body>
+</html>
