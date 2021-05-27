@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="meuApp" ng-controller="meuCtrl">
+    <h2>Restaurante X</h2>
+
+    <p ng-show="hora >= 17">Estamos Aberto as {{hora}}h</p>
+</div>
+
+<script type="text/javascript">
+    let app = angular.module('meuApp', []);
+    app.controller('meuCtrl', function ($scope){
+        $scope.hora = 17;
+    });
+</script>
+</body>
+</html>
