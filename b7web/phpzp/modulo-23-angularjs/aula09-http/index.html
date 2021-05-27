@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="meuApp" ng-controller="meuCtrl">
+    <h2>Lista de Nomes</h2>
+
+    <ul>
+        <li ng-repeat="x in nomes">{{x.nome}} tem {{x.idade}} anos</li>
+    </ul>
+
+    <!--<div>{{ html }}</div>-->
+</div>
+
+<script type="text/javascript">
+    let app = angular.module('meuApp', []);
+    app.controller('meuCtrl', function ($scope, $http){
+        $scope.nomes = [];
+
+        // http://phpdozeroaoprofissional.com.br/testeangularjs.php
+
+        $http.get('http://phpdozeroaoprofissional.com.br/testeangularjs.php').then(function (response){
+            $scope.nomes = response.data.resultado;
+        });
+
+        /*
+        $scope.html = 'nada';
+        $http.get('pagina1.html').then(function (response){
+            $scope.html = response.data;
+        });
+        */
+    });
+</script>
+</body>
+</html>
