@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body ng-app="meuApp" ng-controller="meuCtrl">
+
+<input type="text" ng-focus="focado()" ng-blur="naofocado()">
+<p>{{textoinput}}</p>
+
+<!---------------------------->
+
+<button ng-click="acao()">{{texto}}</button>
+
+<!--<button ng-click="mostrarDiv()">Mostrar</button>
+<button ng-click="esconderDiv()">Não Mostrar</button>-->
+
+<div ng-show="mostrar">
+    <h2>Menu</h2>
+    <div>Teste</div>
+    <div>Teste2</div>
+    <div>Teste3</div>
+</div>
+
+<!--<button ng-click="add()">+1</button>
+
+<p>{{contador}}</p>-->
+
+<script type="text/javascript">
+    let app = angular.module('meuApp', []);
+    app.controller('meuCtrl', function ($scope){
+        $scope.textoinput = '';
+
+        $scope.focado = function (){
+            $scope.textoinput = 'Ta focado';
+        }
+
+        $scope.naofocado = function (){
+            $scope.textoinput = 'Não ta tocado';
+        }
+
+//////////
+        $scope.mostrar = false;
+        $scope.texto = "Mostrar";
+
+        $scope.acao = function (){
+            if($scope.mostrar === false){
+                $scope.mostrar = true;
+                $scope.texto = "Não Mostrar";
+            }else{
+                $scope.mostrar = false;
+                $scope.texto = "Mostrar";
+            }
+        }
+
+        /*$scope.mostrarDiv = function (){
+            $scope.mostrar = true;
+        }
+
+        $scope.esconderDiv = function (){
+            $scope.mostrar = false;
+        }*/
+
+        /*$scope.contador = 0;
+
+        $scope.add = function (){
+            $scope.contador = $scope.contador + 1;
+        };*/
+    });
+</script>
+</body>
+</html>
