@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body ng-app="meuApp" ng-controller="meuCtrl">
+
+    <!--<input type="text" ng-model="texto" ng-change="rodar()">-->
+
+    <p>{{ texto }}</p>
+    <p>{{ texto2 }}</p>
+
+<script type="text/javascript">
+    let app = angular.module('meuApp', []);
+    app.controller('meuCtrl', function ($scope){
+        $scope.texto = "20";
+        $scope.texto2 = '';
+
+        // angular.isString($scope.texto)
+        if(angular.isNumber($scope.texto)){
+            $scope.texto2 = "Sim é uma string";
+        }else{
+            $scope.texto2 = "Não é uma string";
+        }
+
+        /*$scope.texto2 = '';
+
+        $scope.rodar = function (){
+            let value = $scope.texto
+            //$scope.texto2 = value.toUpperCase();
+            $scope.texto2 = value.toLowerCase();
+        }*/
+    });
+</script>
+</body>
+</html>
