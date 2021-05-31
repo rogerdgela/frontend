@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body ng-app="meuApp" ng-controller="meuCtrl">
+
+<form name="meuForm">
+    <input type="email" name="meuInput" ng-model="meuEmail" required><br><br>
+    <span style="display: block;" ng-show="meuForm.meuInput.$dirty && meuForm.meuInput.$invalid">Este campo não é valido.</span>
+    <input type="submit">
+
+    <!--<p>The input's valid state is:</p>
+    <h1>{{meuForm.myInput.$valid}}</h1>-->
+</form>
+
+<script type="text/javascript">
+    let app = angular.module('meuApp', []);
+    app.controller('meuCtrl', function ($scope){
+
+    });
+</script>
+</body>
+</html>
