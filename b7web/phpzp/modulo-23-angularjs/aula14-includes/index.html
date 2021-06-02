@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body ng-app="meuApp" ng-controller="meuCtrl">
+
+    <div ng-include="'topo.html'"></div>
+
+    <div ng-include="'pagina1.html'"></div>
+
+<script type="text/javascript">
+    let app = angular.module('meuApp', []);
+    app.controller('meuCtrl', function ($scope){
+        $scope.nomes = ["Olá","Teste","Joinville"];
+    });
+</script>
+</body>
+</html>
