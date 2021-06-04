@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body ng-app="meuApp" ng-controller="meuCtrl">
+
+<h2>Lista de comprar</h2>
+
+<input type="text" ng-model="addTexto">
+<button ng-click="addItem()">+</button><br>
+<span>{{aviso}}</span>
+
+<ul>
+    <li ng-repeat="p in lista | orderBy:p">
+        {{p}}
+        <button ng-click="removeItem($index)">-</button>
+    </li>
+</ul>
+
+<script type="text/javascript">
+    let app = angular.module('meuApp', []);
+    app.controller('meuCtrl', function ($scope){
+        $scope.lista = ["Leite","Pão"];
+
+        $scope.addItem = function (){
+            $scope.aviso = '';
+            console.log($scope.addTexto);
+            if($scope.addTexto != ''){
+                if(typeof $scope.addTexto !== 'undefined'){
+                    if($scope.lista.indexOf($scope.addTexto) == -1){
+                        $scope.lista.push($scope.addTexto);
+                    }else{
+                        $scope.aviso = 'Item já adicionado';
+                    }
+                }
+            }
+
+            $scope.addTexto = '';
+        }
+
+        $scope.removeItem = function (x){
+            $scope.aviso = '';
+
+            $scope.lista.splice(x,1);
+        }
+    });
+</script>
+</body>
+</html>
